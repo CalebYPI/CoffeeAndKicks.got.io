@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="owlcarousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="owlcarousel/owl.theme.default.css">
+    <style>
+        .gallery {
+            padding: 2% 0;
+        }
+        
+        .gallery .column {
+            padding: 0 5%;
+            height: auto;
+        }
+        
+        .gallery .column img {
+            width: 100%;
+            height: auto;
+            margin-bottom: -4px;
+        }
+        
+        .gallery .column img.hover-shadow {
+            transition: 0.3s;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+        /* Modal Content */
+        
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+        }
+        /* The Close Button */
+        
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        .mySlides {
+            display: none;
+            background: #000;
+        }
+        
+        .cursor {
+            cursor: pointer;
+        }
+        /* Next & previous buttons */
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* Position the "next button" to the right */
+        
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        /* On hover, add a black background color with a little bit see-through */
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+        
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;
+        }
+        
+        .demo {
+            opacity: 0.6;
+        }
+        
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+        
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .column {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <h1>
+            <img src="images/Unedited_WTBHS_Emblem.png" alt="emblem" width="90" height="100" style="text-align:center; padding-left:5px"><i>
+				<p style="color:rgb(37, 42, 53);  margin: 0px;">Wittebome High School
+			</i><sub>Duty first</sub></p>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a class="active" href="Gallery.html">Gallery</a></li>
+            <li><a href="Staff.html">Staff</a></li>
+            <li><a href="Get Involved.html">Get Involved</a></li>
+            <li><a href="Policies.html">Policies</a></li>
+            <li><a href="Curriculum.html">Curriculum</a></li>
+        </ul>
+    </nav>
+    <div class="green"></div>
+    <div class="yellow"></div>
+    <section class="gallery">
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="column">
+                    <img src="images/mr-esau.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(1)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/van-der-ross.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(2)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/mr-trew.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(3)">View</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="column">
+                    <img src="images/matric-ball-2016.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(4)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/Mr-Alkana-Students.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(5)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/Mr-blows.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(6)">View</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="column">
+                    <img src="images/mr-esau-news-paper.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(7)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/Mrs-Fortuin_students.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(8)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/Mr-Trew-students.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(9)">View</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="owl-carousel owl-theme">
+                <div class="column">
+                    <img src="images/old-school.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(10)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/Staff-Photo-School-Front.jpg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(11)">View</button>
+                </div>
+                <div class="column">
+                    <img src="images/students-uct-visit.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+                    <p>text that describes the image or block of text</p>
+                    <button onclick="openModal();currentSlide(12)">View</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+                <!-- replace duplicates with images in sequence -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/mr-esau.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/van-der-ross.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/mr-trew.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/mr-esau.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/van-der-ross.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/mr-trew.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/mr-esau.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/van-der-ross.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/mr-trew.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/mr-esau.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/van-der-ross.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/mr-trew.jpg" style="width:50%; display: block; margin: 0 auto;">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </section>
+    <br>
+    <footer>
+        <div class="row">
+            <div class="column">
+                <p>
+                    <p style="color:rgb(43, 50, 65);"><b>Social Media:</b></p>
+                </p>
+                <a href="https://www.facebook.com/wittebomehigh/?fref=photo" target="_blank"> <img src="images/1facebook.png" alt="emblem" width="80" height="80" style="text-align:center"> </a>
+
+            </div>
+            <div class="column">
+                <p>
+                    <p style="color:rgb(43, 50, 65);"><b>Contact Us:</b></p>
+                </p>
+                <p>
+                    <p style="color:rgb(43, 50, 65);">Fax: 021 797 7814.</p>
+                </p>
+                <p>
+                    <p style="color:rgb(43, 50, 65);">Telephone: 021 761 1535.</p>
+                </p>
+                <p>
+                    <p style="color:rgb(43, 50, 65);">Email:
+                        <a href="mailto:wittebome.high@small.com">wittebome.high@small.com</a>.
+                    </p>
+                </p>
+            </div>
+            <div class="column">
+                <p>
+                    <p style="color:rgb(43, 50, 65);"><b>Find Us:</b></p>
+                </p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.380609383816!2d18.47248141506349!3d-34.0084399806179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcc42fd8cafdcd7%3A0x1e5be8cef9944f95!2sWittebome%20High%20School!5e0!3m2!1sen!2sza!4v1572547088047!5m2!1sen!2sza"
+                    width="300" height="100" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+        </div>
+        <script src="jquery.min.js"></script>
+        <script src="owlcarousel/owl.carousel.min.js"></script>
+    </footer>
+
+    <script>
+        $(document).ready(function() {
+            $('.owl-carousel').owlCarousel({
+                loop: true,
+                margin: 10,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 3,
+                        nav: true
+                    }
+                }
+            })
+        });
+    </script>
+
+    <script>
+        function openModal() {
+            document.getElementById("myModal").style.display = "block";
+        }
+
+        function closeModal() {
+            document.getElementById("myModal").style.display = "none";
+        }
+
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+        }
+    </script>
+
+</body>
+
+</html>

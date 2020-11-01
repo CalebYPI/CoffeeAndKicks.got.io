@@ -1,0 +1,157 @@
+h1 {
+    border-top: 10px solid;
+    color: #273D6F;
+    font-family: "times new roman";
+    font-size: 45pt;
+    text-align: center;
+    color: #273D6F;
+    background-color: #FFFEFF;
+}
+
+sub {
+    font-size: 10pt;
+}
+
+footer {
+    background-color: #FFFEFF;
+    text-align: center;
+    font-family: "arial";
+    padding-bottom: 10px;
+    border-top: 5px solid;
+    color: #273D6F;
+    border-bottom: 5px solid;
+    color: #273D6F;
+}
+
+.yellow {
+    border-style: solid;
+    border-top-color: #E8D306;
+    border-bottom-color: #E8D306;
+    border-left-color: #E8D306;
+    border-right-color: #E8D306;
+}
+
+.green {
+    border-style: solid;
+    border-top-color: #02a124;
+    border-bottom-color: #02a124;
+    border-left-color: #02a124;
+    border-right-color: #02a124;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFFEFF;
+    font-family: "arial";
+    border-bottom: 8px solid #273D6F;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    font-size: 22px;
+}
+
+nav ul li {
+    float: left;
+    width: 12.5%;
+}
+
+nav ul li a {
+    display: block;
+    color: rgb(43, 50, 65);
+    text-align: center;
+    padding: 10px 0px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bold;
+}
+
+nav .active {
+    font-weight: bold;
+    font-size: 25px;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255));
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    height: 200px;
+    /* Should be removed. Only for demonstration */
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.Vision {
+    float: left;
+    text-align: center;
+    font-family: "arial";
+    color: rgb(43, 50, 65);
+    font-size: 20px;
+    float: left;
+    width: 50%;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+}
+
+.bodytext {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contact-left {
+    padding: 28px;
+}
+
+.teaching {
+    font-family: "arial";
+    padding-left: 5%;
+}
+
+.subjects {
+    font-family: "arial";
+    padding-left: 5%;
+}
+
+.col-md-12 {
+    width: 100%;
+    float: left;
+    padding: 15px;
+}
+
+.col-md-6 {
+    width: 50%;
+    float: left;
+    padding: 15px;
+}
+
+.col-md-4 {
+    width: 33.33%;
+    float: left;
+    padding: 15px;
+}
+
+.col-md-3 {
+    width: 25%;
+    float: left;
+    padding: 15px;
+}
